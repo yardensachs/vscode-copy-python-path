@@ -1,7 +1,9 @@
 # Change Log
-All notable changes to the "copy-python-path" extension will be documented in this file.
+All notable changes will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [1.0.1]
+- NPM Package Update
+- Removed message after copy
 
 ## [1.0.0]
 - Initial release

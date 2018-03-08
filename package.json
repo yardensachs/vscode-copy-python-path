@@ -1,12 +1,18 @@
 {
     "name": "copy-python-path",
-    "displayName": "copy-python-path",
+    "displayName": "Copy Python Path",
     "description": "Copy a file Python path",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "yardensachs",
+    "repository": "https://github.com/yardensachs/vscode-copy-python-path",
     "engines": {
         "vscode": "^1.21.0"
     },
+    "galleryBanner": {
+        "color": "#F99125",
+        "theme": "light"
+    },
+    "icon": "icon.png",
     "categories": [
         "Other"
     ],

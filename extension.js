@@ -11,10 +11,7 @@ function activate(context) {
         var pypath = py_proc.stdout.toString();
 
         if(pypath){
-
             copy_paste.copy(pypath);
-            vscode.window.showInformationMessage(pypath + ' was copied to clipboard');
-
         } else {
             vscode.window.showInformationMessage('Python path was not found');
         }
