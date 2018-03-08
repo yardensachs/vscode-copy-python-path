@@ -8,7 +8,7 @@ function activate(context) {
         var pyexec = vscode.workspace.getConfiguration().python.pythonPath
         var filename = vscode.window.activeTextEditor.document.fileName;
         var py_proc = child_process.spawnSync(pyexec, [__dirname + '/get_path.py', filename]);
-        var pypath = py_proc.stdout.toString();
+        var pypath = py_proc.stdout.toString().trim();
 
         if(pypath){
             copy_paste.copy(pypath);
