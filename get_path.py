@@ -2,29 +2,24 @@ import sys
 
 from os import path
 
-def _base_filename(filename):
-    return path.splitext(path.basename(filename))[0]
-
-def _is_package(pckg_path):
-    filename = path.join(pckg_path, '__init__.py')
-    if path.exists(filename):
-        return True
-    return False
-
 def run(filename):
-    pckg = []
+    package = []
+    base_filename = path.splitext(path.basename(filename))[0]
 
-    if _base_filename(filename) != '__init__':
-        pckg.append(_base_filename(filename))
+    if base_filename != '__init__':
+        package.append(base_filename)
 
-    pckg_path = path.dirname(filename)
-    while _is_package(pckg_path):
-        pckg.append(path.basename(pckg_path))
-        pckg_path, old_path = path.dirname(pckg_path), pckg_path
-        if pckg_path == old_path:
+    package_path = path.dirname(filename)
+
+    while path.exists(path.join(package_path, '__init__.py')):
+        package.append(path.basename(package_path))
+
+        package_path, old_path = path.dirname(package_path), package_path
+
+        if package_path == old_path:
             break
 
-    return '.'.join(reversed(pckg))
+    return '.'.join(reversed(package))
 
 
 if __name__ == '__main__':

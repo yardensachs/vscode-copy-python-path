@@ -2,7 +2,7 @@
     "name": "copy-python-path",
     "displayName": "Copy Python Path",
     "description": "Copy a file Python path",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "publisher": "yardensachs",
     "repository": "https://github.com/yardensachs/vscode-copy-python-path",
     "engines": {
