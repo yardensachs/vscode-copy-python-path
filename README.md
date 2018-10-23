@@ -7,3 +7,6 @@ Activate using from Command Palette or editor menu: "Copy Python Path of Active 
 
 Inspiration and help from the Sublime Package:
 https://github.com/Mimino666/SublimeText2-python-package-to-clipboard
+
+
+![Screencast][screencast.gif]
